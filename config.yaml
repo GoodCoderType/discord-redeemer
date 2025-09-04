@@ -1,0 +1,110 @@
+auth:
+    username: 'ninjago'               # you can either fill this out yourself if you already have an account or use the built in assistant to register.
+    password: 'ninjago'
+
+client:
+    proxyless: false  # If true, no proxies will be used.
+    rotate_proxies: true # If a request fails, try to rotate the proxies to get a working one.
+    use_websocket: false # I suggest leaving it on true since it can improve token quality, but can make checkout slower
+    retries_per_request: 5 # How many times to retry a request if it fails
+    timeout_gen: 10 # How many seconds to wait for a response when generating a vcc
+    timeout: 30 # How many seconds to wait for a response
+
+    static_timezone: true # Makes token logging faster, wouldn't necesserally recommend it to use it
+
+logger:
+    level: 2 # 2 - Most detailed, 1 - Medium, 0 - Least detailed
+    censor_sensitive_information: true
+    show_extra_info: true # Shows extra info about the redeem process
+
+    connector: '-->'
+
+    icons:
+        info: '>'
+        extra_info: '*'
+        warn: '!'
+        error: 'X'
+        success: '$'
+    colors: # Colors: green, red, gray, yellow, lyellow, blue, lblue, purple, cyan, white, black
+        info: 'lblue'
+        info_end: 'lblue'
+        extra_info: 'cyan'
+        extra_info_end: 'cyan'
+        warn: 'yellow'
+        warn_end: 'yellow'
+        error: 'red'
+        error_end: 'red'
+        success: 'green'
+        success_end: 'green'
+        timestamp: 'gray'
+
+api_integration:
+    vcc_api_link: "http://localhost:8080"
+    vcc_api_key: "" # If a key is used, its gonna enable balance checks
+    wait_for_all_tokens_to_finish: true # Its gonna get a new vcc only when all the old vccs are used
+
+    promo_api_link: "" # If a link is used, its not going to use our own gen
+    promo_api_key: "9" # If a key is used, its gonna enable balance checks
+
+resources:
+    vcc_uses: 4 # How many times a vcc can be used
+    auth_retry: 1 # How many times to retry auth if it fails
+    billing:
+        person_name: 'Fahad Al Saud'
+        address_2: ''
+        address: 'purok 1'
+        country: 'PH' # We need to make a list for this.
+        postal: '6220'
+        state: 'negros oriental'
+        city: '6220'
+        
+    billing_spoofer_code: 4  # Don't touch it automatically gets set
+
+    output_different_folders: false # Make a different folder for each session
+    turbo_mode: false # Minimizes the redeem times, attention: aggresive mode, use if you trust the material quality
+    use_gen_promo: false # When promos finish, use the gen for promos
+    use_gen_vcc: false # When vcc finish, use the gen for vcc
+    look_for_card_on_token: false # If it fails to add vcc, look for a valid vcc on the token
+    use_card_from_account_if_invalid: false # If the found vcc is invalid, still try and use it
+    sequential_vcc_fetch: false # uses each one after another, doesn't wait for 1 to finish uses
+
+misc:
+    pause:
+        pause_key: "ctrl+shift+a"
+        pause_after_redeems: 0 # How many redeems to pause
+    sleep:
+        redeem: 1 # Amount of time to sleep after a redeem
+        minimum_redeem_time: true # If true, it will sleep make sure a redeem takes minimum the amount of time in sleep[redeem]
+        threads_redeem_one_by_one: false # If true, each thread will redeem one token at a time
+
+tokens:
+    check_billing: false # Check if billing is clean
+    token_unflagger: true # Improves Token Quality, Mostly On Aged Tokens!
+    remove_vcc: false # Remove Attached Vcc after Redeem
+
+    token_customizer:
+        customize_bio: false
+        bio_descriptions: ['Join .gg/silentzone']
+
+        customize_nick: false
+        nicks: ['NinjaTim']
+
+        change_pass: false
+        passwords: ['NinjaRide&EinTim']
+
+        password_less_token_changer: false
+
+
+    fetch_new_vcc: true # If fails to redeem due to vcc, put a new one, suggest to keep it on false since discord throws cap on second add
+
+integrations:
+    webhook:
+        enabled: false
+        url: '' # put your discord webhook here
+        message_id: '' # this will be filled out automatically
+
+    bot:
+        enabled: false
+        token: 'MTMzNjcwMzMxMjkzMzk0NTQ1Ng.Gh_qPH.bgPqzmV5K_aHRcxolAh9c-HF_no68Dbpct3ML8' # put your bot token here
+        owner_id: [965698745817784370] # an array of users permitted to use the bot
+        logs_id: 1339618907589443687 # channel id of the logs channel

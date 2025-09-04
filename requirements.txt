@@ -1,0 +1,14 @@
+ruamel.yaml
+tls-client
+pystyle
+websocket-client
+requests
+pillow
+discord.py
+typing_extensions
+user_agents
+keyboard
+faker
+cryptography
+pycryptodome
+pycryptodomex
