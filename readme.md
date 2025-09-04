@@ -30,7 +30,6 @@ I won’t provide step-by-step setup instructions.
 
 ### 🛠️ Support  
 - ✅ General support available  
-- 💰 Updates & bug fixes = **paid work**  
 
 ### 📜 Last Words from the Original Developer  
 ""Well, this is it. Have fun with it.
@@ -47,8 +46,7 @@ Thanks for all you guys have done for us.
 Signed: NinjaRide / EinTim"
 
 ### 📌 My Links  
-- 🛒 **My Tools Shop:** [dsc.gg/raftar](http://dsc.gg/raftar)  
-- 👤 **Discord Contact:** `@goodcodertype`  
+- 👤 **Discord Contact (For general support):** `@goodcodertype`  
 
 ### ⭐ Stars Target  
 - ⭐ **20+ Stars** → Full guide to setup & usage  
@@ -56,3 +54,4 @@ Signed: NinjaRide / EinTim"
 - ⭐ **50+ Stars** → Free bug fixes & updates  
 
 🔥 Enjoy & keep the open-source spirit alive!
+
